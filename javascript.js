@@ -9,11 +9,14 @@ Kok.prototype.scrollChecker = function (distance, callback) {
     }, false);
 }
 
-// example
 Kok.prototype.removeScrollIcon = function () {
     alert("YES!");
 }
 
+// example without var
+this.scrollChecker(40, this.removeScrollIcon);
+
+// example with var
 this.params.removeScrollIconFunction = this.removeScrollIcon;
 this.scrollChecker(40, this.params.removeScrollIconFunction);
 
