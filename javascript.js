@@ -94,3 +94,24 @@ Kok.prototype.log = function (text, color) {
     if (color) { x = color }
     console.log(`%c ${text} `, 'background: #fff; color: ' + x + '');
 }
+
+
+/* ====== SIMPLEST PASSWORD ======*/
+// HTML:
+//<div id="pwWrapper" style="    position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 99999999; background: #fff;"> <form>
+//<label for="pswd">Enter your password: </label>
+//<input type="password" id="pswd">
+//<input class="inputButton" type="button" value="Submit" onclick="checkPswd();" />
+//</form>
+//</div>
+
+function checkPswd() {
+    var confirmPassword = "cari";
+    var password = document.getElementById("pswd").value;
+    if (password == confirmPassword) {
+        document.getElementById('pwWrapper').remove();
+    }
+    else{
+        alert("Passwords do not match.");
+    }
+}
