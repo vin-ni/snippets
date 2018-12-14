@@ -128,3 +128,8 @@ function normalize(v,vmin,vmax,tmin, tmax){
 	return tv;
 
 }
+
+/* ====== GSAP Timelinebase ======*/
+var tl = new TimelineLite();
+tl.fromTo(el1, {width:"0%"}, {width:"100%"});
+tl.fromTo(el2, 1, {height:"0%"}, {height:"100%"},"-=2");
