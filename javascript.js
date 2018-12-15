@@ -133,3 +133,8 @@ function normalize(v,vmin,vmax,tmin, tmax){
 var tl = new TimelineLite();
 tl.fromTo(el1, {width:"0%"}, {width:"100%"});
 tl.fromTo(el2, 1, {height:"0%"}, {height:"100%"},"-=2");
+
+/* ====== GET INNER WIDTH FOR CANVAS RESIZING ======*/
+let windowWidth = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
