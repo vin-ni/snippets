@@ -138,3 +138,19 @@ tl.fromTo(el2, 1, {height:"0%"}, {height:"100%"},"-=2");
 let windowWidth = window.innerWidth
 || document.documentElement.clientWidth
 || document.body.clientWidth;
+
+/* ====== Script to log console to dom (for debugging webview for example) ======*/
+
+<script
+src="https://code.jquery.com/jquery-2.2.4.js"
+integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+crossorigin="anonymous"></script>
+
+<div id="debug" style="position: fixed;left: 0	top:0;background: red;
+padding: 20px; z-index: 999999999999"></div>
+<script>
+  console.log = function(message) {$('#debug').append('<p>' + message + '</p>');};
+  console.error = console.debug = console.info =  console.log
+</script>
+
+
