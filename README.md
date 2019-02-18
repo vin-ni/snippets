@@ -1,5 +1,5 @@
 # Snippets
-Collection of snippets of any kind I find usefull
+Collection of snippets I find useful
 
 ## Scroll Checker
 
