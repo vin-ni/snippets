@@ -1,5 +1,6 @@
 # Snippets
 Collection of snippets I find useful
+
 - [Snippets](#snippets)
 	- [Scroll Checker](#scroll-checker)
 	- [Debounce Function](#debounce-function)
