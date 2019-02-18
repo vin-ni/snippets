@@ -1,16 +1,12 @@
-# Snippets
-Collection of snippets I find useful
-
-- [Snippets](#snippets)
-	- [Scroll Checker](#scroll-checker)
-	- [Debounce Function](#debounce-function)
-	- [Execute function by name with params](#execute-function-by-name-with-params)
-	- [Log with color](#log-with-color)
-	- [Simplest Password](#simplest-password)
-	- [Normalize / Map Value Range to different Range](#normalize--map-value-range-to-different-range)
-	- [GSAP timeline base](#gsap-timeline-base)
-	- [Get inner width for canvas resizing](#get-inner-width-for-canvas-resizing)
-	- [Script to log console to dom (for debugging webview for example)](#script-to-log-console-to-dom-for-debugging-webview-for-example)
+- [Scroll Checker](#scroll-checker)
+- [Debounce Function](#debounce-function)
+- [Execute function by name with params](#execute-function-by-name-with-params)
+- [Log with color](#log-with-color)
+- [Simplest Password](#simplest-password)
+- [Normalize / Map Value Range to different Range](#normalize--map-value-range-to-different-range)
+- [GSAP timeline base](#gsap-timeline-base)
+- [Get inner width for canvas resizing](#get-inner-width-for-canvas-resizing)
+- [Script to log console to dom (for debugging webview for example)](#script-to-log-console-to-dom-for-debugging-webview-for-example)
 
 <!-- TOC generated with https://ecotrust-canada.github.io/markdown-toc/ -->
 
