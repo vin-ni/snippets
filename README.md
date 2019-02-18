@@ -12,6 +12,8 @@ Collection of snippets I find useful
 	- [Get inner width for canvas resizing](#get-inner-width-for-canvas-resizing)
 	- [Script to log console to dom (for debugging webview for example)](#script-to-log-console-to-dom-for-debugging-webview-for-example)
 
+<!-- TOC generated with https://ecotrust-canada.github.io/markdown-toc/ -->
+
 ## Scroll Checker
 
 ``` javascript
