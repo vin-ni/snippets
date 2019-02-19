@@ -1,14 +1,15 @@
 # Snippets
 - [Snippets](#snippets)
-	- [Scroll Checker](#scroll-checker)
-	- [Debounce Function](#debounce-function)
-	- [Execute function by name with params](#execute-function-by-name-with-params)
-	- [Log with color](#log-with-color)
-	- [Simplest Password](#simplest-password)
-	- [Normalize / Map Value Range to different Range](#normalize--map-value-range-to-different-range)
-	- [GSAP timeline base](#gsap-timeline-base)
-	- [Get inner width for canvas resizing](#get-inner-width-for-canvas-resizing)
-	- [Script to log console to dom (for debugging webview for example)](#script-to-log-console-to-dom-for-debugging-webview-for-example)
+  - [Scroll Checker](#scroll-checker)
+  - [Debounce Function](#debounce-function)
+  - [Execute function by name with params](#execute-function-by-name-with-params)
+  - [Log with color](#log-with-color)
+  - [Simplest Password](#simplest-password)
+  - [Normalize / Map Value Range to different Range](#normalize--map-value-range-to-different-range)
+  - [GSAP timeline base](#gsap-timeline-base)
+  - [Get inner width for canvas resizing](#get-inner-width-for-canvas-resizing)
+  - [Script to log console to dom (for debugging webview for example)](#script-to-log-console-to-dom-for-debugging-webview-for-example)
+  - [Remove css hover states on touch devices](#remove-css-hover-states-on-touch-devices)
 
 <!-- TOC generated with https://ecotrust-canada.github.io/markdown-toc/ -->
 
@@ -185,6 +186,31 @@ padding: 20px; z-index: 999999999999"></div>
 console.log = function(message) {$('#debug').append('<p>' + message + '</p>');};
 console.error = console.debug = console.info =  console.log
 </script>
+```
+
+## Remove css hover states on touch devices
+
+```javascript
+var touch = 'ontouchstart' in document.documentElement
+            || (navigator.MaxTouchPoints > 0)
+            || (navigator.msMaxTouchPoints > 0);
+
+if (touch) { // remove all :hover stylesheets
+    try { // prevent exception on browsers not supporting DOM styleSheets properly
+        for (var si in document.styleSheets) {
+            var styleSheet = document.styleSheets[si];
+            if (!styleSheet.rules) continue;
+
+            for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                if (!styleSheet.rules[ri].selectorText) continue;
+
+                if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                    styleSheet.deleteRule(ri);
+                }
+            }
+        }
+    } catch (ex) {}
+}
 ```
 
 
