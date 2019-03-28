@@ -10,6 +10,7 @@
   - [Get inner width for canvas resizing](#get-inner-width-for-canvas-resizing)
   - [Script to log console to dom (for debugging webview for example)](#script-to-log-console-to-dom-for-debugging-webview-for-example)
   - [Remove css hover states on touch devices](#remove-css-hover-states-on-touch-devices)
+  - [Run Local Node Server on Mobile](#run-local-node-server-on-mobile)
 
 <!-- TOC generated with https://ecotrust-canada.github.io/markdown-toc/ -->
 
@@ -213,4 +214,9 @@ if (touch) { // remove all :hover stylesheets
 }
 ```
 
+## Run local node server on mobile
+
+1. check pc ip with terminal: ifconfig / ipconfig getifaddr en2
+2. change in node app.js line 101:  server.listen(port, "192.168.178.32",
+3. open on phone 192.168.178.32:1337
 
