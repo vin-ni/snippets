@@ -220,3 +220,10 @@ if (touch) { // remove all :hover stylesheets
 2. change in node app.js line 101:  server.listen(port, "192.168.178.32",
 3. open on phone 192.168.178.32:1337
 
+## Bind global error event listener
+
+```javascript
+window.addEventListener('error', function (event) {
+    console.log("ERROR: " + event.message + " at " + event.filename + " : " + event.lineno + " : " + event.colno);
+});
+```
