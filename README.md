@@ -1,16 +1,17 @@
 # Snippets
 - [Snippets](#snippets)
-  - [Scroll Checker](#scroll-checker)
-  - [Debounce Function](#debounce-function)
-  - [Execute function by name with params](#execute-function-by-name-with-params)
-  - [Log with color](#log-with-color)
-  - [Simplest Password](#simplest-password)
-  - [Normalize / Map Value Range to different Range](#normalize--map-value-range-to-different-range)
-  - [GSAP timeline base](#gsap-timeline-base)
-  - [Get inner width for canvas resizing](#get-inner-width-for-canvas-resizing)
-  - [Script to log console to dom (for debugging webview for example)](#script-to-log-console-to-dom-for-debugging-webview-for-example)
-  - [Remove css hover states on touch devices](#remove-css-hover-states-on-touch-devices)
-  - [Run Local Node Server on Mobile](#run-local-node-server-on-mobile)
+  * [Scroll Checker](#scroll-checker)
+  * [Debounce Function](#debounce-function)
+  * [Execute function by name with params](#execute-function-by-name-with-params)
+  * [Log with color](#log-with-color)
+  * [Simplest Password](#simplest-password)
+  * [Normalize / Map Value Range to different Range](#normalize---map-value-range-to-different-range)
+  * [GSAP timeline base](#gsap-timeline-base)
+  * [Get inner width for canvas resizing](#get-inner-width-for-canvas-resizing)
+  * [Script to log console to dom (for debugging webview for example)](#script-to-log-console-to-dom--for-debugging-webview-for-example-)
+  * [Remove css hover states on touch devices](#remove-css-hover-states-on-touch-devices)
+  * [Run local node server on mobile](#run-local-node-server-on-mobile)
+  * [Random Number min, max](#random-number-min--max)
 
 <!-- TOC generated with https://ecotrust-canada.github.io/markdown-toc/ -->
 
@@ -220,3 +221,11 @@ if (touch) { // remove all :hover stylesheets
 2. change in node app.js line 101:  server.listen(port, "192.168.178.32",
 3. open on phone 192.168.178.32:1337
 
+
+## Random Number min, max
+
+```javascript
+function rrand(min, max) {
+	return Math.random() * (max - min) + min;
+};
+```
