@@ -11,6 +11,7 @@
   * [Script to log console to dom (for debugging webview for example)](#script-to-log-console-to-dom--for-debugging-webview-for-example-)
   * [Remove css hover states on touch devices](#remove-css-hover-states-on-touch-devices)
   * [Run local node server on mobile](#run-local-node-server-on-mobile)
+  * [Bind global error event listener](#bind-global-error-event-listener)
   * [Random Number min, max](#random-number-min--max)
 
 <!-- TOC generated with https://ecotrust-canada.github.io/markdown-toc/ -->
@@ -222,10 +223,17 @@ if (touch) { // remove all :hover stylesheets
 3. open on phone 192.168.178.32:1337
 
 
+## Bind global error event listener
+
+```javascript
+window.addEventListener('error', function (event) {
+    console.log("ERROR: " + event.message + " at " + event.filename + " : " + event.lineno + " : " + event.colno);
+});
+```
+
 ## Random Number min, max
 
 ```javascript
 function rrand(min, max) {
 	return Math.random() * (max - min) + min;
 };
-```
