@@ -13,6 +13,7 @@
   * [Run local node server on mobile](#run-local-node-server-on-mobile)
   * [Bind global error event listener](#bind-global-error-event-listener)
   * [Random Number min, max](#random-number-min--max)
+  * [Pm2 Stuff](#pm2-stuff)
 
 <!-- TOC generated with https://ecotrust-canada.github.io/markdown-toc/ -->
 
@@ -237,3 +238,13 @@ window.addEventListener('error', function (event) {
 function rrand(min, max) {
 	return Math.random() * (max - min) + min;
 };
+```
+
+## Pm2 Stuff
+
+| code | description |
+|------|-------------|
+| `pm2 list` | to see all active processes |
+| `pm2 start ecosystem.config.js` | to start with ecosystem in mind |
+| `pm2 monit` | Monitor all processes |
+| `pm2 ecosystem` | generate a sample process file |
