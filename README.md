@@ -179,6 +179,11 @@ new TimelineLite({
 // pause
 tl.to({}, 2, {});
 
+// run function
+tl.add(function () {
+  // this.function();
+}, "tag");
+
 ```
 
 ## Get inner width for canvas resizing
