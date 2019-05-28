@@ -176,6 +176,9 @@ new TimelineLite({
    }
 });
 
+// pause
+tl.to({}, 2, {});
+
 ```
 
 ## Get inner width for canvas resizing
