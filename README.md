@@ -266,3 +266,17 @@ function rrand(min, max) {
 | `pm2 start ecosystem.config.js` | to start with ecosystem in mind |
 | `pm2 monit` | Monitor all processes |
 | `pm2 ecosystem` | generate a sample process file |
+
+
+## Make Id
+```
+function makeid(length) {
+	var result           = '';
+	var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	var charactersLength = characters.length;
+	for ( var i = 0; i < length; i++ ) {
+		 result += characters.charAt(Math.floor(Math.random() * charactersLength));
+	}
+	return result;
+}
+```
