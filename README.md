@@ -164,8 +164,18 @@ function normalize(v,vmin,vmax,tmin, tmax){
 ## GSAP timeline base
 ```javascript
 var tl = new TimelineLite();
-tl.fromTo(el1, {width:"0%"}, {width:"100%"});
-tl.fromTo(el2, 1, {height:"0%"}, {height:"100%"},"-=2");
+tl.set(element.rotation, { x: 0);
+tl.to(element.rotation, 2, { x: rotation, ease: Power2.easeInOut }, "firstRotation");
+
+new TimelineLite({
+  onComplete: function () {
+    if (self.params.runAnimation) {
+      // this.restart();
+      this.seek("finalLoop");
+    }
+   }
+});
+
 ```
 
 ## Get inner width for canvas resizing
