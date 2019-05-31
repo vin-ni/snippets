@@ -269,7 +269,7 @@ function rrand(min, max) {
 
 
 ## Make Id
-```
+```javascript
 function makeid(length) {
 	var result           = '';
 	var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -280,3 +280,11 @@ function makeid(length) {
 	return result;
 }
 ```
+
+## Arrays
+```javascript
+const fruits = ['banana', 'pear', 'apple']
+const allfruits = fruits.concat('mango')
+```
+
+Notice that concat() does not actually add an item to the array, but creates a new array, which you can assign to another variable, or reassign to the original array (declaring it as let, as you cannot reassign a const):
