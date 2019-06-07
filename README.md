@@ -14,6 +14,8 @@
   * [Bind global error event listener](#bind-global-error-event-listener)
   * [Random Number min, max](#random-number-min--max)
   * [Pm2 Stuff](#pm2-stuff)
+  * [Make Id](#make-id)
+  * [Arrays](#arrays)
 
 <!-- TOC generated with https://ecotrust-canada.github.io/markdown-toc/ -->
 
@@ -266,6 +268,7 @@ function rrand(min, max) {
 | `pm2 start ecosystem.config.js` | to start with ecosystem in mind |
 | `pm2 monit` | Monitor all processes |
 | `pm2 ecosystem` | generate a sample process file |
+| `pm2 restart 4` | restart process with Id 4 |
 
 
 ## Make Id
