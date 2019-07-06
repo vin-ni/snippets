@@ -291,3 +291,9 @@ const allfruits = fruits.concat('mango')
 ```
 
 Notice that concat() does not actually add an item to the array, but creates a new array, which you can assign to another variable, or reassign to the original array (declaring it as let, as you cannot reassign a const):
+
+## Python
+Prints execution time in a notebook
+``` python
+%%time
+´´´
