@@ -296,7 +296,7 @@ function indexNumbers (index, zeros) {
 		}
 	}
 
-	return parseInt(string)
+	return string
 }
 ```
 
