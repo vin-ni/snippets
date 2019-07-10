@@ -284,6 +284,22 @@ function makeid(length) {
 }
 ```
 
+## reindex Numbers
+```javascript
+function indexNumbers (index, zeros) {
+	let string = String(index);
+	let length = string.length;
+
+	if (length < zeros) {
+		for (let i = 0; i < zeros-length; i++) {
+			string = "0" + string
+		}
+	}
+
+	return parseInt(string)
+}
+```
+
 ## Arrays
 ```javascript
 const fruits = ['banana', 'pear', 'apple']
