@@ -313,3 +313,11 @@ Prints execution time in a notebook
 ``` python
 %%time
 ´´´
+
+Python tqdm counter
+``` python
+from tqdm import tqdm_notebook as tqdm
+for fileName in tqdm(listing):
+	print(x)
+´´´
+
