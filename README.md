@@ -319,5 +319,34 @@ Python tqdm counter
 from tqdm import tqdm_notebook as tqdm
 for fileName in tqdm(listing):
 	print(x)
-´´´
+```
+
+## SHADER
+Basic Vertex
+``` glsl
+function vertexShader () {
+    return `
+	void main() {
+	  gl_Position = projectionMatrix *
+			modelViewMatrix *
+			vec4(position,1.0);
+	}
+    `
+}
+```
+
+Basic Fragment
+
+``` glsl
+function fragmentShader () {
+	return `
+		varying vec2 vUv;
+	
+		void main() {
+		  gl_FragColor = vec4( vec3( 1., 1.,1. ), 1 );
+		}
+	`
+}
+```
+
 
