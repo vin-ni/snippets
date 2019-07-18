@@ -166,7 +166,7 @@ function normalize(v,vmin,vmax,tmin, tmax){
 ## GSAP timeline base
 ```javascript
 var tl = new TimelineLite();
-tl.set(element.rotation, { x: 0);
+tl.set(element.rotation, { x: 0});
 tl.to(element.rotation, 2, { x: rotation, ease: Power2.easeInOut }, "firstRotation");
 
 new TimelineLite({
