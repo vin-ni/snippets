@@ -262,6 +262,7 @@ function rrand(min, max) {
 
 ## Pm2 Stuff
 
+General:
 | code | description |
 |------|-------------|
 | `pm2 list` | to see all active processes |
@@ -271,6 +272,13 @@ function rrand(min, max) {
 | `pm2 restart 4` | restart process with Id 4 |
 | `pm2 stop app_name/id` | stop process |
 | `pm2 delete 0` | delete process |
+
+Startup:
+| code | description |
+|------|-------------|
+| `pm2 save` | saves process list |
+| `pm2 unstartup` | unstartup|
+| `pm2 startup` | startup |
 
 
 
