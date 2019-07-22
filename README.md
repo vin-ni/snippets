@@ -262,6 +262,8 @@ function rrand(min, max) {
 
 ## Pm2 Stuff
 
+General:
+
 | code | description |
 |------|-------------|
 | `pm2 list` | to see all active processes |
