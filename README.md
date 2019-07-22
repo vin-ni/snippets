@@ -269,6 +269,8 @@ function rrand(min, max) {
 | `pm2 monit` | Monitor all processes |
 | `pm2 ecosystem` | generate a sample process file |
 | `pm2 restart 4` | restart process with Id 4 |
+| `pm2 stop app_name` | stop process |
+
 
 
 ## Make Id
