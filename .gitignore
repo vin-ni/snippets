@@ -1,4 +1,4 @@
-
+node_modules
 .DS_Store
 bases/threejs base with grid/config.codekit3
 bases/html base/.editorconfig
