@@ -1,0 +1,19 @@
+{
+  "name": "saferoad",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vinzenz aubry",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "path": "^0.12.7",
+    "socket.io": "^2.0.4"
+  }
+}
