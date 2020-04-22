@@ -1,0 +1,46 @@
+body {
+  font-family: sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 12px 0 12px 12px; }
+
+/* ============ General ============*/
+.linkFooter {
+  padding: 12px;
+  margin-top: 12px; }
+
+/* ============ Main Floor ============*/
+.chatWrapper {
+  background-color: yellow;
+  width: 100vw;
+  padding: 12px; }
+
+/* ============ Toilets ============*/
+.cubicleWrapper {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px; }
+  .cubicleWrapper .cubicle {
+    width: 150px;
+    height: 200px;
+    background-color: blue;
+    border: solid white 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .cubicleWrapper .cubicle p {
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      margin-bottom: 12px; }
+    .cubicleWrapper .cubicle a {
+      color: white; }
+
+/* ============ Lost and Found ============*/

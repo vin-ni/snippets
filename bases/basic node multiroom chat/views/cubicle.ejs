@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Toiletroom</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script>
+      const roomName = '<%= roomName %>';
+    </script>
+
+    <link rel="stylesheet" href="../public/css/main.css" />
+  </head>
+
+  <body>
+    <p>Cubicle <%= roomName %></p>
+
+    <div class="chatWrapper">
+      <div id="message-container"></div>
+      <form id="send-container">
+        <input type="text" id="message-input" />
+        <button type="submit" id="send-button">Send</button>
+      </form>
+    </div>
+
+    <div class="linkFooter">
+      <a href="../mainfloor">Main Floor</a>
+      <a href="../toilets">Toilets</a>
+      <a href="../lostandfound">Lost and Found</a>
+    </div>
+
+    <!-- Socket -->
+    <script src="../public/js/socket.io.js"></script>
+
+    <!-- Client -->
+    <script src="../public/js/client-cubicle.js"></script>
+  </body>
+</html>
