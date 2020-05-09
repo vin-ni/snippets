@@ -4,13 +4,16 @@ const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
-const imgRoutes = require('./api/routes/imgupload');
+const uploadApi = require('./api/routes/dataUpload');
 
 app.use(morgan('dev'));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json({ parameterLimit: 100000, limit: '5mb', extended: true }));
+
+app.use('/assets', express.static(__dirname + '/public'));
+app.set('view engine', 'ejs');
 
 // CORS // prevent those errors
 app.use((req, res, next) => {
@@ -26,7 +29,13 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/v1/upload', imgRoutes);
+// =========================== ROUTERS ================================ //
+
+app.get('/', function (req, res) {
+  res.render('index', {});
+});
+
+app.use('/v1/upload', uploadApi);
 
 // anything that gets passed the routes
 app.use((req, res, next) => {
@@ -44,11 +53,5 @@ app.use((error, req, res, next) => {
     },
   });
 });
-
-// app.use((req, res, next) => {
-//     res.status(200).json({
-//         message: "it works"
-//     });
-// });
 
 module.exports = app;
