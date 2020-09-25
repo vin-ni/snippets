@@ -20,6 +20,16 @@
 
 <!-- TOC generated with https://ecotrust-canada.github.io/markdown-toc/ -->
 
+## Sound on Click
+```javascript
+window.addEventListener('click', this.startSound, false);
+
+
+startSound = () => {
+window.removeEventListener('click', this.startSound, false);
+}
+```
+
 ## Scroll Checker
 
 ```javascript
