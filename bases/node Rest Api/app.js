@@ -9,7 +9,10 @@ const generalRoutes = require('./api/routes/generalRoutes');
 
 //app.use(morgan('dev')); // this is for logging http requests
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json({ parameterLimit: 100000, limit: '8mb', extended: true }));
+app.use(bodyParser.json({ parameterLimit: 100000, limit: '5mb', extended: true }));
+
+app.use('/assets', express.static(__dirname + '/public'));
+app.set('view engine', 'ejs');
 
 // CORS // prevent those errors
 app.use((req, res, next) => {
@@ -24,16 +27,13 @@ app.use((req, res, next) => {
   next();
 });
 
+// =========================== ROUTERS ================================ //
+
+app.get('/', function (req, res) {
+  res.render('index', {});
+});
+
 app.use('/v1/', generalRoutes); // general routes
-
-// static preview site
-// app.use(express.static(path.join(__dirname, 'production')));
-// app.get('/', (req, res) => {
-//   res.sendFile(__dirname, '/production/index.html');
-// });
-
-//static api test site
-// app.use('/apitest', express.static(__dirname + '/testapi'));
 
 // anything that gets passed the routes
 app.use((req, res, next) => {
