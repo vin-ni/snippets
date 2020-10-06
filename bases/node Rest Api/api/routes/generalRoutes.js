@@ -14,7 +14,7 @@ router.get('/newuser', async function (req, res) {
   res.status(200).json({ C02SAVED: string });
 });
 
-router.get('/newuser', async function (req, res) {
+router.get('/currentc02', async function (req, res) {
   let usrNumber = await oF.getCount();
   let string = calculateTons(usrNumber);
   res.status(200).json({ C02SAVED: string });
