@@ -10,13 +10,9 @@
   "author": "va",
   "license": "ISC",
   "dependencies": {
-    "app-root-path": "^3.0.0",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "express-timeout-handler": "^2.2.0",
-    "express-validator": "^6.4.0",
     "morgan": "^1.10.0"
-  },
-  "devDependencies": {}
+  }
 }

@@ -1,15 +1,16 @@
-// eslint-disable-next-line no-unused-vars
-require('dotenv').config();
+const environmentVars = require('dotenv').config();
 const express = require('express');
 const app = express();
-// const morgan = require('morgan');
+const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const path = require('path');
-const generalRoutes = require('./api/routes/generalRoutes');
 
-//app.use(morgan('dev')); // this is for logging http requests
+const imgRoutes = require('./api/routes/imgupload');
+
+app.use(morgan('dev'));
+
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json({ parameterLimit: 100000, limit: '8mb', extended: true }));
+
+app.use(bodyParser.json({ parameterLimit: 100000, limit: '5mb', extended: true }));
 
 // CORS // prevent those errors
 app.use((req, res, next) => {
@@ -18,22 +19,14 @@ app.use((req, res, next) => {
 
   if (req.method === 'OPTIONS') {
     // the browser makes a request first to check if he can make the request
-    res.header('Access-Control-Allow-Methods', 'POST, GET');
+    res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
     return res.status(200).json({});
   }
+
   next();
 });
 
-app.use('/v1/', generalRoutes); // general routes
-
-// static preview site
-// app.use(express.static(path.join(__dirname, 'production')));
-// app.get('/', (req, res) => {
-//   res.sendFile(__dirname, '/production/index.html');
-// });
-
-//static api test site
-// app.use('/apitest', express.static(__dirname + '/testapi'));
+app.use('/v1/upload', imgRoutes);
 
 // anything that gets passed the routes
 app.use((req, res, next) => {
@@ -51,5 +44,11 @@ app.use((error, req, res, next) => {
     },
   });
 });
+
+// app.use((req, res, next) => {
+//     res.status(200).json({
+//         message: "it works"
+//     });
+// });
 
 module.exports = app;
