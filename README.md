@@ -1,6 +1,7 @@
 # Snippets
 
 - [Snippets](#snippets)
+  - [Sound on Click](#sound-on-click)
   - [Scroll Checker](#scroll-checker)
   - [Debounce Function](#debounce-function)
   - [Execute function by name with params](#execute-function-by-name-with-params)
@@ -9,6 +10,7 @@
   - [Normalize / Map Value Range to different Range](#normalize---map-value-range-to-different-range)
   - [GSAP timeline base](#gsap-timeline-base)
   - [Get inner width for canvas resizing](#get-inner-width-for-canvas-resizing)
+  - [Timestamp](#timestamp)
   - [Script to log console to dom (for debugging webview for example)](#script-to-log-console-to-dom--for-debugging-webview-for-example-)
   - [Remove css hover states on touch devices](#remove-css-hover-states-on-touch-devices)
   - [Run local node server on mobile](#run-local-node-server-on-mobile)
@@ -16,7 +18,13 @@
   - [Random Number min, max](#random-number-min--max)
   - [Pm2 Stuff](#pm2-stuff)
   - [Make Id](#make-id)
+  - [reindex Numbers](#reindex-numbers)
   - [Arrays](#arrays)
+  - [Python](#python)
+  - [SHADER](#shader)
+  - [NODE API](#node-api)
+    * [node](#node)
+    * [javascript POST](#javascript-post)
 
 <!-- TOC generated with https://ecotrust-canada.github.io/markdown-toc/ -->
 
@@ -179,6 +187,7 @@ function normalize(v, vmin, vmax, tmin, tmax) {
 ```
 
 ## GSAP timeline base
+https://greensock.com/cheatsheet/
 
 ```javascript
 var tl = new TimelineLite();
