@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'SuisseIntl';
+  font-style: normal;
+  src: url(~assets/fonts/SuisseIntl-Book-WebM.woff2) format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  font-style: italic;
+  src: url(~assets/fonts/SuisseIntl-BookItalic-WebM.woff2) format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  font-style: normal;
+  src: url(~assets/fonts/SuisseIntl-SemiBold-WebM.woff2) format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  font-style: italic;
+  src: url(~assets/fonts/SuisseIntl-SemiBoldItalic-WebM.woff2) format('woff2');
+  font-weight: 600;
+}
+
+//colors
+$lightweight: #f8f8f8;
+$black: #000000;
+
+*,
+body {
+  font-family: 'SuisseIntl', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: $black;
+}
+
+h2 {
+  font-weight: 600;
+}
