@@ -50,9 +50,13 @@ export default {
     },
   },
 
+  // https://nuxtjs.org/blog/moving-from-nuxtjs-dotenv-to-runtime-config#using-your-config-values
+  publicRuntimeConfig: {}, // public to the frontend
+  privateRuntimeConfig: {}, // private to the frontend
+
   server: {
-    port: 3000, // default: 3000
-    host: '127.0.0.1', // default: localhost 0.0.0.0 for sharing // 127.0.0.1 for online
+    port: process.env.NUXTPORT || 3000, // default: 3000
+    host: process.env.NUXTHOST || '127.0.0.1', // default: localhost 0.0.0.0 for sharing // 127.0.0.1 for online
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
