@@ -54,6 +54,7 @@ export default {
   publicRuntimeConfig: {}, // public to the frontend
   privateRuntimeConfig: {}, // private to the frontend
 
+  // [ ] create a custom .env to fill out those vars
   server: {
     port: process.env.NUXTPORT || 3000, // default: 3000
     host: process.env.NUXTHOST || '127.0.0.1', // default: localhost 0.0.0.0 for sharing // 127.0.0.1 for online
