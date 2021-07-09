@@ -1,32 +1,16 @@
 module.exports = {
   apps: [
     {
-      name: 'tian-ya-gong-ci-shi api',
-      script: 'server.js',
-
-      // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
-      args: 'one two',
-      instances: 1,
+      name: 'api.drifter',
+      exec_mode: 'cluster',
+      instances: 'max', // Or a number of instances
       autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
+      script: 'server.js',
+      args: 'start',
       env: {
-        NODE_ENV: 'development',
-      },
-      env_production: {
-        NODE_ENV: 'production',
+        IP: 'localhost',
+        PORT: 3006,
       },
     },
   ],
-
-  deploy: {
-    production: {
-      user: 'node',
-      host: '134.209.250.188',
-      ref: 'origin/master',
-      repo: 'git@github.com:repo.git',
-      path: '/var/www/production',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production',
-    },
-  },
-};
+}
