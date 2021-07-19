@@ -1,0 +1,24 @@
+{
+  "name": "exampleapi",
+  "version": "1.0.0",
+  "description": "node js restuful api project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "va",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.6.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-timeout-handler": "^2.2.0",
+    "express-validator": "^6.12.0",
+    "i": "^0.3.6",
+    "morgan": "^1.10.0",
+    "npm": "^7.19.1"
+  }
+}
