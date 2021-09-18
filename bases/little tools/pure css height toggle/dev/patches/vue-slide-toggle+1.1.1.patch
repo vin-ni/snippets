@@ -1,0 +1,13 @@
+diff --git a/node_modules/vue-slide-toggle/dist/vue-slide-toggle.es.js b/node_modules/vue-slide-toggle/dist/vue-slide-toggle.es.js
+index 6bfd84c..acec58c 100644
+--- a/node_modules/vue-slide-toggle/dist/vue-slide-toggle.es.js
++++ b/node_modules/vue-slide-toggle/dist/vue-slide-toggle.es.js
+@@ -18,7 +18,7 @@ var SlideToggle = {
+   },
+   data: function data() {
+     return {
+-      scrollHeight: 0,
++      scrollHeight: 300,
+       doneOpenTransition: false,
+       innerOpen: this.open
+     };

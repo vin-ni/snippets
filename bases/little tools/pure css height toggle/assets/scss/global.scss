@@ -1,0 +1,55 @@
+*,
+body {
+  font-family: 'OpenSans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: $black;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  line-height: 25px;
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/*Above */
+@media only screen and (min-width: 1201px) {
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  p,
+  a,
+  h1,
+  h2,
+  h3,
+  span,
+  li,
+  ul,
+  table {
+    // color: $black;
+    // font-size: 21px;
+    // line-height: 28px;
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+}
