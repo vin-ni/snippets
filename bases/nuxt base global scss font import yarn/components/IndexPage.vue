@@ -1,13 +1,10 @@
 <template>
-  <section>
-    <p>About</p>
-  </section>
+  <p>index</p>
 </template>
-
-<style lang="scss"></style>
 
 <script>
 export default {
+  props: {},
   data() {
     return {}
   },

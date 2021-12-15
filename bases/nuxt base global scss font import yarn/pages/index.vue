@@ -1,20 +1,15 @@
 <template>
-  <div>
-    <Index />
-  </div>
+  <IndexPage />
 </template>
+
 <script>
-import Index from '@/components/index/index'
+import IndexPage from '@/components/IndexPage'
+
 export default {
   components: {
-    Index,
+    IndexPage,
   },
-  data() {
-    return {}
-  },
-  computed: {},
-  mounted() {},
-  created() {},
-  methods: {},
+
+  name: 'Index',
 }
 </script>

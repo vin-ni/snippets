@@ -1,19 +1,25 @@
 module.exports = {
-  root: true,
+  parserOptions: {
+    ecmaVersion: 2018,
+    requireConfigFile: false,
+  },
   env: {
     browser: true,
+    es6: true,
     node: true,
   },
-  parserOptions: {
-    parser: 'babel-eslint',
+  extends: 'eslint:recommended',
+  parser: '@babel/eslint-parser',
+  rules: {
+    semi: ['error', 'never'],
+    quotes: ['error', 'single'],
+    'function-paren-newline': ['error', 'never'],
+    'array-element-newline': [
+      'error',
+      {
+        ArrayExpression: 'consistent',
+        ArrayPattern: { minItems: 3 },
+      },
+    ],
   },
-  extends: [
-    '@nuxtjs',
-    'prettier',
-    'plugin:prettier/recommended',
-    'plugin:nuxt/recommended',
-  ],
-  plugins: ['prettier'],
-  // add your custom rules here
-  rules: {},
 }
