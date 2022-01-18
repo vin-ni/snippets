@@ -47,6 +47,7 @@ import {
 } from 'three'
 
 import CameraControls from 'camera-controls'
+import debounce from 'lodash.debounce'
 
 const subsetOfTHREE = {
   MOUSE,
@@ -87,10 +88,15 @@ export default {
     this.addCamera()
     this.addOrbitControls()
     this.addOrbitControlsEventlisteners()
+    this.resize()
     this.render()
     this.addGridHelper()
   },
-  created() {},
+  created() {
+    this.resizeDebouncer = debounce(function () {
+      this.resize()
+    }, 250)
+  },
   methods: {
     setup() {
       this.wrapper = this.$refs.canvasWrapper
@@ -179,6 +185,24 @@ export default {
       })
     },
 
+    resize() {
+      this.params.rendererSize = [
+        this.wrapper.clientWidth,
+        this.wrapper.clientHeight,
+      ]
+
+      this.camera.aspect = this.wrapper.clientWidth / this.wrapper.clientHeight
+      this.camera.updateProjectionMatrix()
+
+      this.renderer.setSize(
+        this.params.rendererSize[0],
+        this.params.rendererSize[1]
+      )
+      this.renderer.outputEncoding = sRGBEncoding
+
+      this.renderer.setPixelRatio(window.devicePixelRatio)
+    },
+
     render() {
       if (this.params.pauseRender) return
       requestAnimationFrame(this.render)
@@ -191,6 +215,10 @@ export default {
       // }
 
       this.renderer.render(this.scene, this.camera)
+    },
+
+    destroyed() {
+      window.removeEventListener('resize', this.resizeDebouncer)
     },
   },
 }

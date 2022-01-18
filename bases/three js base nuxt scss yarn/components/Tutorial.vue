@@ -1,7 +1,7 @@
 <!-- Please remove this file from your project -->
 <template>
   <div>
-    <p>monstermaker</p>
+    <p>studio nonsens 3d</p>
     <NuxtLink to="/v1">Version 1</NuxtLink>
   </div>
 </template>

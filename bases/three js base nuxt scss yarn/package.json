@@ -19,6 +19,7 @@
     "core-js": "^3.19.3",
     "eslint-plugin-prettier": "^4.0.0",
     "fibers": "^5.0.0",
+    "lodash": "^4.17.21",
     "nuxt": "^2.15.8",
     "sass": "^1.47.0",
     "sass-loader": "10",
