@@ -91,6 +91,7 @@ export default {
     this.resize()
     this.render()
     this.addGridHelper()
+    this.addCube()
   },
   created() {
     this.resizeDebouncer = debounce(function () {
@@ -143,8 +144,6 @@ export default {
         500
       )
 
-      const p = this.params.cameraStartingPosition
-      this.camera.position.set(p[0], p[1], p[2])
       this.camera.updateProjectionMatrix()
     },
 
@@ -154,8 +153,8 @@ export default {
       this.controls.maxPolarAngle = Math.PI / 2
       this.controls.minDistance = this.params.cameraDistance
       this.controls.maxDistance = this.params.cameraDistance
-      this.controls.dolly(this.params.cameraDistance, false)
-      this.controls.truckSpeed = 0
+      const p = this.params.cameraStartingPosition
+      this.controls.setLookAt(p[0], p[1], p[2], 0, 0, 0, false)
     },
     addOrbitControlsEventlisteners() {
       const onRest = () => {
@@ -183,6 +182,13 @@ export default {
         this.disableAutoRotate = true
         this.controls.addEventListener('rest', onRest)
       })
+    },
+
+    addCube() {
+      const geometry = new BoxGeometry(20, 20, 20)
+      const material = new MeshNormalMaterial()
+      this.cube = new Mesh(geometry, material)
+      this.scene.add(this.cube)
     },
 
     resize() {
